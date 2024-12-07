@@ -1,6 +1,5 @@
-package com.example.lab_week_12.ui.theme
+package com.example.lab_week_13.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

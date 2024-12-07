@@ -1,10 +1,11 @@
-package com.example.lab_week_12
+package com.example.lab_week_13
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.example.lab_week_12.R
 
 class DetailsActivity : AppCompatActivity() {
 

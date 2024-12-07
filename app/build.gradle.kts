@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
 
 android {
@@ -36,6 +37,7 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding = true
     }
 }
 
@@ -58,6 +60,8 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("androidx.databinding:databinding-common:8.7.3")
+    implementation("androidx.databinding:databinding-runtime:8.7.3")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
@@ -65,7 +69,16 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+
+    implementation("androidx.work:work-runtime:2.10.0")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
     implementation(libs.material)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
 
     testImplementation(libs.junit)
 
